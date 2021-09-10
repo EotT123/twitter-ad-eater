@@ -54,7 +54,7 @@ class TwitterAdEaterModule : IXposedHookLoadPackage {
         v.postDelayed(
             {
                 if (isPromoted(v)) {
-                    v.visibility = View.GONE
+                    v.visibility = View.INVISIBLE
                     if (debugLogsEnabled()) {
                         logcat("Removing ad: view = %s", v)
                         logView(v.parent as View)
